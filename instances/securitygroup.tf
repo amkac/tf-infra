@@ -21,7 +21,9 @@ resource "aws_security_group" "allow-ssh" {
 }
 
 resource "aws_security_group" "allow-http" {
-  name = "allow-http"
+  vpc_id      = var.VPC_ID
+  name        = "allow-http"
+  description = "security group that allows http and all egress traffic"
   ingress {
     from_port   = 8080
     to_port     = 8080
