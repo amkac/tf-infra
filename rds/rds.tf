@@ -1,7 +1,7 @@
 resource "aws_db_subnet_group" "mariadb-subnet" {
   name        = "mariadb-subnet"
   description = "RDS subnet group"
-  subnet_ids  = [var.PRIVATE_SUBNET_ID]
+  subnet_ids  = [var.PRIVATE_SUBNET_1_ID, var.PRIVATE_SUBNET_2_ID]
 }
 
 resource "aws_db_parameter_group" "mariadb-parameters" {

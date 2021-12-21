@@ -1,5 +1,9 @@
-variable "PRIVATE_SUBNET_ID" {
+variable "PRIVATE_SUBNET_1_ID" {
 }
+
+variable "PRIVATE_SUBNET_2_ID" {
+}
+
 
 variable "VPC_ID" {
 }
