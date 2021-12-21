@@ -16,6 +16,6 @@ variable "ALLOWED_SG" {
   description = "RDS allowed sg"
 }
 variable "RDS_PASSWORD" {
-  default = "root"
+  default = "mypassword1993"
 }
 
