@@ -31,12 +31,15 @@ resource "aws_instance" "web" {
   # the VPC subnet
   subnet_id = var.PUBLIC_SUBNET_ID
 
-  user_data = <<-EOF
-              #!/bin/bash
-              apt-get install mysql-client
-              echo "Hello, World" > index.html
-              nohup busybox httpd -f -p 8080 &
-              EOF
+  # user data
+  user_data = data.template_cloudinit_config.cloudinit-example.rendered
+
+  # user_data = <<-EOF
+  #             #!/bin/bash
+  #             apt-get install mysql-client
+  #             echo "Hello, World" > index.html
+  #             nohup busybox httpd -f -p 8080 &
+  #             EOF
 }
 
 output "web-address" {
