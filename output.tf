@@ -12,6 +12,6 @@ output "vpc-id" {
 }
 
 
-output "rds-instance-endpoint" {
-  value = module.rds.rds-instance-endpoint
-}
+# output "rds-instance-endpoint" {
+#   value = module.rds.rds-instance-endpoint
+# }
