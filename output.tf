@@ -1,8 +1,8 @@
 
-output "web-instance-public-ip" {
-  description = "web instance public ip"
-  value       = module.instances.web-instance-public-ip
-}
+# output "web-instance-public-ip" {
+#   description = "web instance public ip"
+#   value       = module.instances.web-instance-public-ip
+# }
 
 
 # network

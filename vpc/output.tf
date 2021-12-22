@@ -1,6 +1,10 @@
 
 
-output "public-subnet-id" {
+output "public-subnet-1-id" {
+  value = aws_subnet.main-public-1.id
+}
+
+output "public-subnet-2-id" {
   value = aws_subnet.main-public-1.id
 }
 
