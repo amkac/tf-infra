@@ -16,6 +16,9 @@ terraform {
   }
 }
 
+module "ecr" {
+  source = "./ecr"
+}
 module "main-vpc" {
   source = "./vpc"
 }
