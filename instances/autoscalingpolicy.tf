@@ -2,7 +2,7 @@
 
 resource "aws_autoscaling_policy" "cpu-policy" {
   name                   = "cpu-policy"
-  autoscaling_group_name = aws_autoscaling_group.autoscaling.name
+  autoscaling_group_name = aws_autoscaling_group.ecs-autoscaling.name
   adjustment_type        = "ChangeInCapacity"
   scaling_adjustment     = "1"
   cooldown               = "300"
@@ -21,7 +21,7 @@ resource "aws_cloudwatch_metric_alarm" "cpu-alarm" {
   threshold           = "30"
 
   dimensions = {
-    "AutoScalingGroupName" = aws_autoscaling_group.autoscaling.name
+    "AutoScalingGroupName" = aws_autoscaling_group.ecs-autoscaling.name
   }
 
   actions_enabled = true
@@ -31,7 +31,7 @@ resource "aws_cloudwatch_metric_alarm" "cpu-alarm" {
 # scale down alarm
 resource "aws_autoscaling_policy" "cpu-policy-scaledown" {
   name                   = "cpu-policy-scaledown"
-  autoscaling_group_name = aws_autoscaling_group.autoscaling.name
+  autoscaling_group_name = aws_autoscaling_group.ecs-autoscaling.name
   adjustment_type        = "ChangeInCapacity"
   scaling_adjustment     = "-1"
   cooldown               = "300"
@@ -50,7 +50,7 @@ resource "aws_cloudwatch_metric_alarm" "cpu-alarm-scaledown" {
   threshold           = "5"
 
   dimensions = {
-    "AutoScalingGroupName" = aws_autoscaling_group.autoscaling.name
+    "AutoScalingGroupName" = aws_autoscaling_group.ecs-autoscaling.name
   }
 
   actions_enabled = true

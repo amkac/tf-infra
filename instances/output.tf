@@ -9,5 +9,5 @@ output "web-instance-sg-ids" {
 }
 
 output "ELB-dns" {
-  value = aws_elb.my-elb.dns_name
+  value = aws_elb.myapp-elb.dns_name
 }

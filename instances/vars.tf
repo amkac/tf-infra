@@ -13,3 +13,12 @@ variable "PATH_TO_PUBLIC_KEY" {
 
 variable "PATH_TO_USER_DATA" {
 }
+
+variable "ECS_EU_WEST_1_AMI" {
+  default = "ami-c8337dbb"
+}
+
+variable "ECS_TASK_DEFINITION_TEMPLATE_PATH" {
+
+}
+
