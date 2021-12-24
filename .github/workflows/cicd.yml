@@ -32,11 +32,6 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
 
-    - name: current directory
-      run: |
-        pwd
-        ls
-
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v2
       with:
@@ -87,6 +82,11 @@ jobs:
       - name: Download task definition
         run: |
           aws ecs describe-task-definition --task-definition myapp --query taskDefinition > task-definition.json
+
+      - name: current directory
+        run: |
+          pwd
+          ls
 
       - name: Fill in the new image ID in the Amazon ECS task definition
         id: task-def
