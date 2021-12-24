@@ -15,7 +15,7 @@ env:
   ECS_SERVICE: my-app                 
   ECS_CLUSTER: my-cluster              
   ECS_TASK_DEFINITION_NAME: my-app                                             
-  CONTAINER_NAME: my-app  
+  CONTAINER_NAME: myapp  
 
 jobs:
 
