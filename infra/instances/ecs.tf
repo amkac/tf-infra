@@ -22,6 +22,8 @@ resource "aws_autoscaling_group" "ecs-autoscaling" {
   launch_configuration = aws_launch_configuration.ecs-launchconfig.name
   min_size             = 1
   max_size             = 1
+  # health_check_type    = "ELB"
+  # load_balancers       = [aws_elb.my-elb.name]
   tag {
     key                 = "Name"
     value               = "ecs-ec2-container"
