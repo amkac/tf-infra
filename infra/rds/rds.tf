@@ -36,8 +36,8 @@ resource "aws_db_instance" "mariadb" {
     Name = "mariadb-instance"
   }
 
-  provisioner "local-exec" {
-    command = "mysql --host=${self.address} --port=${self.port} --user=${self.username} --password=${self.password} < ./scripts/schema.sql"
-  }
+  # provisioner "local-exec" {
+  #   command = "mysql --host=${self.address} --port=${self.port} --user=${self.username} --password=${self.password} < ./scripts/schema.sql"
+  # }
 }
 

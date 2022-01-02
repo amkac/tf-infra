@@ -20,6 +20,6 @@ output "ecr-repository-url" {
 }
 
 
-# output "rds-instance-endpoint" {
-#   value = module.rds.rds-instance-endpoint
-# }
+output "rds-instance-endpoint" {
+  value = module.rds.rds-instance-endpoint
+}
