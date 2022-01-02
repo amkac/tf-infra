@@ -9,7 +9,7 @@ resource "aws_instance" "web" {
   key_name = aws_key_pair.mykey.key_name
 
   # the VPC subnet
-  subnet_id = var.PUBLIC_SUBNET_ID
+  subnet_id = var.PUBLIC_SUBNET_1_ID
 
   # user data
   user_data = data.template_cloudinit_config.cloudinit-example.rendered
