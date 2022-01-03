@@ -1,1 +1,4 @@
 -- mysql --host=mariadb.c5scuymgh2ka.eu-west-1.rds.amazonaws.com --user=root --password=mypassword1993 < ./scripts/schema.sql
+
+
+mysql --host=mariadb.c5scuymgh2ka.eu-west-1.rds.amazonaws.com:3306 --user=root --password=mypassword1993 
