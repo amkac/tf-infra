@@ -22,3 +22,7 @@ variable "ECS_TASK_DEFINITION_TEMPLATE_PATH" {
 
 }
 
+variable "RDS_ENDPOINT" {
+
+}
+

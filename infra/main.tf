@@ -31,6 +31,7 @@ module "instances" {
   PATH_TO_PUBLIC_KEY                = "./keys/mykey.pub"
   PATH_TO_USER_DATA                 = "./scripts/bootstrap.sh"
   ECS_TASK_DEFINITION_TEMPLATE_PATH = "./templates/app.json.tpl"
+  RDS_ENDPOINT                      = module.rds.rds-instance-endpoint
 }
 
 module "rds" {
