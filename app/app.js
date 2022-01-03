@@ -15,10 +15,10 @@ const adminRoutes = require('./routes/admin');
 const shopRoutes = require('./routes/shop');
 
 db.execute('SELECT * FROM products')
-  .then(result => {
+  .then((result) => {
     console.log(result[0], result[1]);
   })
-  .catch(err => {
+  .catch((err) => {
     console.log(err);
   });
 
@@ -30,4 +30,4 @@ app.use(shopRoutes);
 
 app.use(errorController.get404);
 
-app.listen(3000);
+app.listen(80);
