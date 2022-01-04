@@ -9,6 +9,8 @@ on:
   pull_request:
     branches:
       - main
+    paths:
+      - "app/**"
 
 env:
   AWS_REGION: MY_AWS_REGION                            
@@ -48,6 +50,7 @@ jobs:
   deploy:
     name: Deploy to ECS
     needs: build
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     runs-on: ubuntu-latest
     defaults:
       run:
