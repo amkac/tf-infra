@@ -23,8 +23,8 @@ resource "aws_security_group" "allow-mariadb" {
 
 resource "aws_security_group" "allow-mariadb2" {
   vpc_id      = var.VPC_ID
-  name        = "allow-mariadb"
-  description = "allow-mariadb"
+  name        = "allow-mariadb2"
+  description = "allow-mariadb2"
   ingress {
     from_port   = 3306
     to_port     = 3306
