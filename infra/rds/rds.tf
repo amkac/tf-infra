@@ -27,7 +27,7 @@ resource "aws_db_instance" "mariadb" {
   db_subnet_group_name    = aws_db_subnet_group.mariadb-subnet.name
   parameter_group_name    = "default.mariadb10.5"
   multi_az                = "false" # set to true to have high availability: 2 instances synchronized with each other
-  vpc_security_group_ids  = [aws_security_group.allow-mariadb2.id]
+  vpc_security_group_ids  = [aws_security_group.allow-mariadb.id]
   storage_type            = "gp2"
   backup_retention_period = 30              # how long you’re going to keep your backups
   availability_zone       = var.PREFERED_AZ # prefered AZ

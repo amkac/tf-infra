@@ -36,8 +36,8 @@ module "instances" {
 module "rds" {
   source              = "./rds"
   VPC_ID              = module.main-vpc.main-vpc-id
-  PRIVATE_SUBNET_1_ID = module.main-vpc.public-subnet-1-id
-  PRIVATE_SUBNET_2_ID = module.main-vpc.public-subnet-2-id
+  PRIVATE_SUBNET_1_ID = module.main-vpc.private-subnet-1-id
+  PRIVATE_SUBNET_2_ID = module.main-vpc.private-subnet-2-id
   ALLOWED_SG          = module.instances.web-instance-sg-ids
   PREFERED_AZ         = module.main-vpc.private-subnet-az
 }
