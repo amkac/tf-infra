@@ -14,6 +14,10 @@ resource "aws_instance" "web" {
   # user data
   user_data = data.template_cloudinit_config.cloudinit-example.rendered
 
+  tags = {
+    Name = "web-proxy"
+  }
+
   # user_data = <<-EOF
   #             #!/bin/bash
   #             apt-get install mysql-client
