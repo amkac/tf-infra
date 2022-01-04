@@ -21,3 +21,18 @@ resource "aws_security_group" "allow-mariadb" {
   }
 }
 
+resource "aws_security_group" "allow-mariadb2" {
+  vpc_id      = var.VPC_ID
+  name        = "allow-mariadb"
+  description = "allow-mariadb"
+  ingress {
+    from_port   = 3306
+    to_port     = 3306
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"] # allowing access from our example instance
+  }
+
+  tags = {
+    Name = "allow-mariadb2"
+  }
+}

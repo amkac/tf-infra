@@ -12,13 +12,13 @@ data "template_cloudinit_config" "cloudinit-example" {
   }
 
   #init schema
-  part {
-    content_type = "text/x-shellscript"
-    content      = <<-EOF
-    #!/bin/bash
-    mysql --host=${var.RDS_ENDPOINT} --user=root --password=mypassword1993 < ./scripts/schema.sql
-    EOF
-  }
+  # part {
+  #   content_type = "text/x-shellscript"
+  #   content      = <<-EOF
+  #   #!/bin/bash
+  #   mysql --host=${var.RDS_ENDPOINT} --user=root --password=mypassword1993 < ./scripts/schema.sql
+  #   EOF
+  # }
 
 }
 
