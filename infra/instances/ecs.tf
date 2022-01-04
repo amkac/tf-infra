@@ -18,7 +18,7 @@ resource "aws_launch_configuration" "ecs-launchconfig" {
 
 resource "aws_autoscaling_group" "ecs-autoscaling" {
   name                 = "ecs-autoscaling"
-  vpc_zone_identifier  = [var.PUBLIC_SUBNET_1_ID, var.PUBLIC_SUBNET_2_ID]
+  vpc_zone_identifier  = [var.PRIVATE_SUBNET_1_ID, var.PRIVATE_SUBNET_2_ID]
   launch_configuration = aws_launch_configuration.ecs-launchconfig.name
   min_size             = 2
   max_size             = 4

@@ -4,6 +4,13 @@ variable "PUBLIC_SUBNET_1_ID" {
 variable "PUBLIC_SUBNET_2_ID" {
 }
 
+variable "PRIVATE_SUBNET_1_ID" {
+}
+
+variable "PRIVATE_SUBNET_2_ID" {
+}
+
+
 variable "VPC_ID" {
 }
 
