@@ -15,7 +15,7 @@ resource "aws_instance" "web" {
   user_data = data.template_cloudinit_config.cloudinit-example.rendered
 
   tags = {
-    Name = "web-proxy-2"
+    Name = "web-proxy"
   }
 
   # user_data = <<-EOF
